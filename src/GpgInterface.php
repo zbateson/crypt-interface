@@ -16,39 +16,40 @@ use Psr\Http\Message\StreamInterface;
  */
 interface GpgInterface
 {
-    const VERIFY_VALID = 0x1;
-    const VERIFY_INVALID = 0x4;
-
     /**
      * Returns a StreamInterface of the encrypted data contained in the passed
      * stream, or false on failure.
      *
+     * @param string|resource|StreamInterface
      * @return StreamInterface|boolean
      */
-    public function encrypt(StreamInterface $in);
+    public function encrypt($data);
 
     /**
      * Returns a StreamInterface of the decrypted data contained in the passed
      * stream, or false on failure.
      *
+     * @param string|resource|StreamInterface
      * @return StreamInterface|boolean
      */
-    public function decrypt(StreamInterface $in);
+    public function decrypt($in);
 
     /**
      * Returns the signed text or signature of the passed stream, or false on
      * failure.
      *
+     * @param string|resource|StreamInterface $in
      * @return string|boolean
      */
-    public function sign(StreamInterface $in);
+    public function sign($in);
 
     /**
-     * Returns either GpgInterface::VERIFY_VALID or GpgInterface::VERIFY_INVALID
-     * if the passed data has been signed with the passed $signature.  The
-     * method returns false otherwise.
+     * Returns either true if the passed data has been signed with the passed
+     * $signature and has been verified, or false otherwise.
      *
-     * @return boolean|int
+     * @param string|resource|StreamInterface $in
+     * @param string $signature
+     * @return boolean
      */
-    public function verify(StreamInterface $in, $signature);
+    public function verify($in, $signature);
 }
