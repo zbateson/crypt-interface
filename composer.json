@@ -1,0 +1,23 @@
+{
+    "name": "zbateson/gpg-interface",
+    "description": "Common interface for gpg libraries",
+    "keywords": ["gpg", "pgp", "interface", "encryption"],
+    "type": "library",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Zaahid Bateson"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/zbateson/gpg-interface/issues",
+        "source": "https://github.com/zbateson/gpg-interface"
+    },
+    "require": {
+        "php": ">=5.4",
+        "psr/http-message": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {"ZBateson\\GpgInterface\\": "src/"}
+    }
+}
