@@ -1,6 +1,6 @@
 {
     "name": "zbateson/crypt-interface",
-    "description": "Common interface for gpg libraries",
+    "description": "Common interface for cryptographic libraries",
     "keywords": ["cryptography", "mime", "interface", "encryption"],
     "type": "library",
     "license": "BSD-2-Clause",
