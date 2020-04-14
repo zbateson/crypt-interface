@@ -1,20 +1,20 @@
 <?php
 /**
- * This file is part of the zbateson\gpg-interface project.
+ * This file is part of the zbateson/crypt-interface project.
  *
  * @license http://opensource.org/licenses/bsd-license.php BSD
  */
-namespace ZBateson\GpgInterface;
+namespace ZBateson\CryptInterface;
 
 use Psr\Http\Message\StreamInterface;
 
 /**
- * Provides an abstracted interface for gpg encryption, decryption, signing and
- * verification.
+ * Provides an abstracted interface for cryptographic functions: encryption,
+ * decryption, signing and verification.
  *
  * @author Zaahid Bateson
  */
-interface GpgInterface
+interface ICrypt
 {
     /**
      * Returns a StreamInterface of the encrypted data contained in the passed
@@ -52,4 +52,12 @@ interface GpgInterface
      * @return boolean
      */
     public function verify($in, $signature);
+
+    /**
+     * Returns true if the passed mimetype is supported, either for
+     * encryption/decryption or signing/verifying.
+     *
+     * @return boolean
+     */
+    public function isSupported($mimeType);
 }

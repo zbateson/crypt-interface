@@ -1,7 +1,7 @@
 {
-    "name": "zbateson/gpg-interface",
+    "name": "zbateson/crypt-interface",
     "description": "Common interface for gpg libraries",
-    "keywords": ["gpg", "pgp", "interface", "encryption"],
+    "keywords": ["cryptography", "mime", "interface", "encryption"],
     "type": "library",
     "license": "BSD-2-Clause",
     "authors": [
@@ -10,8 +10,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/zbateson/gpg-interface/issues",
-        "source": "https://github.com/zbateson/gpg-interface"
+        "issues": "https://github.com/zbateson/crypt-interface/issues",
+        "source": "https://github.com/zbateson/crypt-interface"
     },
     "require": {
         "php": ">=5.4",
@@ -19,6 +19,6 @@
         "guzzlehttp/psr7": "^1.0"
     },
     "autoload": {
-        "psr-4": {"ZBateson\\GpgInterface\\": "src/"}
+        "psr-4": {"ZBateson\\CryptInterface\\": "src/"}
     }
 }

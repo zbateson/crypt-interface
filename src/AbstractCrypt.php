@@ -1,23 +1,23 @@
 <?php
 /**
- * This file is part of the zbateson\gpg-interface project.
+ * This file is part of the zbateson/crypt-interface project.
  *
  * @license http://opensource.org/licenses/bsd-license.php BSD
  */
-namespace ZBateson\GpgInterface;
+namespace ZBateson\CryptInterface;
 
 use Psr\Http\Message\StreamInterface;
 use GuzzleHttp\Psr7;
 
 /**
- * Simple implementation of GpgInterface that users can inherit from.
+ * Simple implementation of ICrypt that users can inherit from.
  *
  * Defines abstract methods with StreamInterface parameters, calling them after
  * creating a Stream out of the passed data to encrypt/decrypt/sign and verify.
  *
  * @author Zaahid Bateson
  */
-abstract class AbstractGpg implements GpgInterface
+abstract class AbstractCrypt implements ICrypt
 {
     /**
      * Returns a StreamInterface of the encrypted data contained in the passed
